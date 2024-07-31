@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Roll Number</th>
+                <th>Name</th>
+                <th>Mark</th>
+                <th>delete</th>
+                <th>          update</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <button onclick="add()">Add</button>
+    <button onclick="deleteRow()">delete</button>
+
+
+    <script>
+        const dataArray = [];
+
+        function add() {
+            let name = prompt("Please enter your name");
+            let mark = prompt("Please enter your mark");
+            let rollNumber = prompt("Please enter roll number");
+
+
+            const person = {
+                rollNumber: rollNumber,
+                name: name,
+                mark: mark
+            };
+
+
+            dataArray.push(person);
+
+
+            updateTable();
+        }
+
+        function updateTable() {
+
+            const tbody = document.querySelector('#dataTable tbody');
+            tbody.innerHTML = '';
+
+
+            dataArray.forEach((person, index) => {
+                const row = document.createElement('tr');
+                const rollNumberCell = document.createElement('td');
+                const nameCell = document.createElement('td');
+                const markCell = document.createElement('td');
+                const buttonCell = document.createElement('button');
+                const upButtoncell= document.createElement('button');
+
+                buttonCell.innerHTML = "Delete";
+                buttonCell.onclick = () => deleteRow(index);
+
+                upButtoncell.innerHTML="update";
+                upButtoncell.onclick = () => updateRow(index);
+
+                rollNumberCell.textContent = person.rollNumber;
+                nameCell.textContent = person.name;
+                markCell.textContent = person.mark;
+
+                row.appendChild(rollNumberCell);
+                row.appendChild(nameCell);
+                row.appendChild(markCell);
+                row.appendChild(buttonCell);
+                row.appendChild(upButtoncell);
+                tbody.appendChild(row);
+            });
+        }
+        function deleteRow(index) {
+        //   let index=dataArray.indexOf(index);
+        //   if(index>-1)
+            dataArray.splice(index,1)
+            updateTable();
+        }
+        function updateRow(index){
+          
+        }
+    </script>
+</body>
+
+</html>
