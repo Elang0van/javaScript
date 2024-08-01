@@ -20,7 +20,7 @@
         }
 
         #b {
-            display: none; /* Initially hide #b */
+            display: none;
         }
 
         button {
@@ -52,18 +52,24 @@
         <pre>
         <form id="studentForm">
             <label for="name">Name:</label>
-            <input type="text" id="name" required><br>
+            <input type="text" id="name" required placeholder="FULL NAME"><br>
+            <p id="aa"></p><br>
             <label for="mark">Mark:</label>
-            <input type="text" id="mark" required><br>
+            <input type="text" id="mark" required placeholder="YOUR MARK"><br>
+            <p id="bb"></p><br>
             <label for="roll">Roll Number:</label>
-            <input type="text" id="roll" required><br>
+            <input type="text" id="roll" required placeholder="YOU ROLLNUMBER"><br>
+            <p id="cc"></p>
 
-            <button type="button" id="submit" onclick="add()">Submit</button>
+
+            <button type="button" id="submit" onclick="add()">Submit</button>    
+            <button onclick="document.getElementById('b').style.display='none'">close</button>
+            <button id="clear">clear</button>
         </form>
         </pre>
     </div>
-
-    <script src="list/Script2.js">
+  
+    <script src="task.js">
         
     </script>
 </body>

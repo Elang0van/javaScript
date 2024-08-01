@@ -1,19 +1,55 @@
-
 document.getElementById('addButton').addEventListener('click', function() {
     document.getElementById('b').style.display = 'block';
 });
 
-const dataArray = [];
-
-document.getElementById('studentForm').addEventListener('submit', (event) => {
-event.preventDefault();
-add();
+document.getElementById('clear').addEventListener('click', function() {
+    clearInputs();
 });
 
+
+// let button=document.getElementById('submit');
+//  button.addEventListener('click',() =>{
+//     dataArray.push(input.value)
+//     add(input.value)
+//     input.value='';
+//  })
+
+
+const dataArray = [];
+
+//document.getElementById('studentForm').addEventListener('submit', (event) => {
+//event.preventDefault();
+//add();
+//});
+
 function add() {
+
 let name = document.getElementById('name').value;
 let mark = document.getElementById('mark').value;
 let rollNumber = document.getElementById('roll').value;
+
+if(name !=='' && mark !=='' && rollNumber!==''){
+document.getElementById('submit').addEventListener('click', function() {
+    document.getElementById('b').style.display = 'none';
+});
+}
+if(name !==''){
+    document.getElementById('submit').addEventListener('click',function(){
+        document.getElementById('aa').innerHTML="please enter your name"
+    })
+}
+  
+document.getElementById('name').value = '';
+document.getElementById('mark').value = '';
+document.getElementById('roll').value = '';
+
+// document.getElementById('clear').addEventListener('click',function(){
+//       document.getElementById('name').value = '';
+//      document.getElementById('mark').value = '';
+//      document.getElementById('roll').value = '';
+//  })
+
+
 
 const person = {
 rollNumber: rollNumber,
@@ -21,10 +57,37 @@ name: name,
 mark: mark
 };
 
+if(name !=='' && mark!=='' && rollNumber!=='' )
 dataArray.push(person);
 updateTable();
-}
 
+let hasError = false;
+
+    if (name == '') {
+        document.getElementById('aa').innerHTML = "Please enter your name";
+        hasError = true;
+    } else {
+        document.getElementById('aa').innerHTML = "";
+    }
+
+    if (mark == '') {
+        document.getElementById('bb').innerHTML = "Please enter your mark";
+        hasError = true;
+    } else {
+        document.getElementById('bb').innerHTML = "";
+    }
+
+    if (rollNumber == '') {
+        document.getElementById('cc').innerHTML = "Please enter your roll number";
+        hasError = true;
+    } else {
+        document.getElementById('cc').innerHTML = "";
+    }
+
+    if (hasError) {
+        return;
+    }
+}
 function updateTable() {
 const tbody = document.querySelector('#dataTable tbody');
 tbody.innerHTML = '';
