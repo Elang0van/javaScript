@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Table</title>
+    <style>
+        table, th, td {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+        }
+        #a, #b {
+            margin: 20px;
+        }
+        #b {
+            display: none;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="a">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Roll Number</th>
+                    <th>Name</th>
+                    <th>Mark</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                    <th>Course</th>
+                    <th>Gender</th>
+                    <th>Date</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <button id="addButton">Add</button>
+    </div>
+    <div id="b">
+        <form id="studentForm">
+            <label for="name">Name    :     </label>
+            <input type="text" id="name" required placeholder="Fullname"><br>
+            <p id="aa"></p><br>
+            <label for="mark">Mark    :   </label>
+            <input type="text" id="mark" required placeholder="Mark"><br>
+            <p id="bb"></p><br>
+            <label for="roll">Roll Number   :    </label>
+            <input type="text" id="roll" required placeholder="Rollnumber"><br>
+            <p id="cc"></p>
+
+            <label for="contact">Contact        :   </label>
+            <input type="number" placeholder="Mobile"><br> 
+            <br>
+            <h3>Languages</h3>
+            <label >Tamil</label>
+            <input type="checkbox" id="TamilNadu" value="Tamil"><br>
+
+            <label >English</label>
+            <input type="checkbox" id="English" value="english"><br>
+    
+            <label>Telugu</label>
+            <input type="checkbox" id="Telugu" value="telugu"><br>
+    
+            <label >Kanndam</label>
+            <input type="checkbox" id="kanndam"  value="kanndam"><br>
+
+        <h3>Education</h3>
+        <label for="select">
+            select
+        </label>
+        <select name="Education" id="">
+            <option value="bca">BCA</option>
+            <option value="be">BE</option>
+            <option value="Bsc.CS">Bsc.CS</option>
+            <option value="mca">MCA</option>
+            <option value="msc.CS">Msc.CS</option>
+            <option value="other">others</option>
+        </select><br>
+
+       <h4>Gender</h4>
+        <label for="option1">Male</label>
+        <input type="radio" id="option1" name="choices" value="option1">
+        
+        <label for="option2">Female</label>
+        <input type="radio" id="option2" name="choices" value="option2">
+        
+        <label for="option3">Others</label>
+        <input type="radio" id="option3" name="choices" value="option3"><br>
+        <br>
+
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday"><br>
+
+                     
+            <button type="button" id="submit">Submit</button>    
+            <button type="button" onclick="document.getElementById('b').style.display='none'">Close</button>
+            <button type="button" id="clear">Clear</button>
+
+        </form>
+    </div>
+    <script src="task1.js"></script>
+</body>
+</html>

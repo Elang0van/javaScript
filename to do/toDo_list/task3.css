@@ -1,0 +1,98 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  /* Headers */
+  h3, h4 {
+    margin-bottom: 5px;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 90%;
+    border: 2px solid black;
+    border-collapse: collapse;
+    background-color: aquamarine;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: left;
+    color: black;
+    text-decoration: solid;
+  }
+  
+  th {
+    background-color:aqua;
+    color: black;
+  }
+  
+  /* Container Styling */
+  #a, #b {
+    margin: 20px 0;
+  }
+  
+  #b {
+    height: inherit;
+    width: 50%;
+    background-color: aquamarine;
+    padding: 30px;
+    box-shadow: 1px 2px 5px, 1px 1px 5px aqua;
+  
+    border-radius: 5px;
+    display: none;
+  }
+  
+  /* Button Styling */
+  button {
+    background-color: #2c6efa;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color:pink;
+    box-shadow: 1px 2px 2px  aqua;
+  }
+  
+  /* Input and Select Styling */
+  input[type="text"], input[type="number"], input[type="date"], select {
+    width: calc(60% - 20px);
+    padding: 15px;
+    margin: 5px 0 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type="checkbox"], input[type="radio"] {
+    margin-right: 30px;
+  }
+  
+  /* Error Styling */
+  .error {
+    color: red;
+    font-size: 0.9em;
+  }
+  
+  /* Label Styling */
+  label {
+    display: block;
+    margin: 5px 0;
+  }
+   h2{
+    font-size: 50px;
+    text-align: center;
+    color: aqua;
+   }
