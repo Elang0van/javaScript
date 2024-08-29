@@ -1,0 +1,78 @@
+/* Form.css */
+
+/* Overall Form Styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Form Container */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+/* General Label Styling */
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Styling for Text, Email, Phone Inputs, and Select */
+input[type="text"],
+input[type="email"],
+input[type="phone"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Styling for Radio and Checkbox Inputs */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Inline styling for Radio and Checkbox Labels */
+.radio-group,
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+/* Styling for Submit Button */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    margin-top: 15px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}

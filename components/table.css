@@ -1,0 +1,19 @@
+
+table {
+  border-collapse: collapse; /* Optional: To collapse borders between cells */
+  width: 100%; /* Optional: To make the table take the full width of its container */
+  border-radius: 10px;
+  border-style:solid;
+}
+
+table, th, td {
+  border: 1px solid solid black; /* Applies a 1px solid black border to the table, header cells (th), and data cells (td) */
+  border-radius: 30px;
+}
+
+th, td {
+  padding: 8px; /* Optional: Adds padding to the cells */
+  text-align: left; /* Optional: Aligns text to the left within the cells */
+  border-style:solid;
+  border-style:solid;
+}
